@@ -1,0 +1,100 @@
+// start g-team block
+// style for User Hour component
+.g-team {
+    background: $gray-98;
+    border: 1px solid $gray-86;
+
+    header {
+        padding: 10px 10px 5px;
+    }
+
+    mark {
+        color: $red;
+    }
+}
+
+.g-team {
+
+    &__form {
+        font-size: rem(14);
+        line-height: rem(24);
+
+        input {
+            width: 83px;
+            padding: 0 9px;
+        }
+
+        sup {
+            font-size: rem(10);
+            line-height: rem(14);
+        }
+    }
+
+    &__body {
+        padding-right: 2px;
+    }
+}
+
+
+
+.g-team-list {
+    height: 175px;
+    padding: 0 5px 0 10px;
+    overflow-y: auto;
+
+    &::-webkit-scrollbar {
+        max-width: 10px;
+        background: $gray-86;
+
+        &-thumb {
+            width: 8px;
+            background: $blue;
+            border: solid 2px $gray-86;
+            border-radius: 5px;
+        }
+    }
+// style for One User component
+    &__item {
+        position: relative;
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 5px 10px 30px;
+        border-bottom: solid 1px $gray-86;
+
+        &::before {
+            content: url('../images/userpic.png');
+            position: absolute;
+            top: 5px;
+            left: 0;
+            display: block;
+        }
+
+        &.active .g-team-list__item__name {
+            font-weight: 700;
+        }
+    }
+}
+
+.g-hours-list {
+    display: flex;
+    font-size: rem(11);
+
+    li {
+        margin-left: 4px;
+        font-weight: 700;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+
+    mark {
+        display: block;
+        font-weight: 700;
+        padding: 0 4px;
+        border-left: solid 1px $gray-80;
+        border-right: solid 1px $gray-80;
+    }
+}
+// END style for One User component
+// end g-team block

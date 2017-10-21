@@ -1,0 +1,124 @@
+// start g-poker block
+// style for Poker playground component
+.g-poker {
+
+    &__header {
+        margin-bottom: 12px;
+        font-size: rem(16);
+        font-weight: 500;
+        line-height: rem(31);
+        text-align: center;
+        vertical-align: top;
+    }
+
+    &__footer {
+        text-align: center;
+    }
+}
+
+.g-poker-list {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 22px;
+
+    &__item {
+        padding: 10px 10px 7px;
+
+        &:hover {
+            @extend .g-poker-list__item.active;
+            cursor: pointer;
+        }
+
+        &.active {
+            background: #fae716;
+            box-shadow: inset 0 0 60px rgba(0, 0, 0, .3);
+        }
+
+        img {
+            display: block;
+            vertical-align: top;
+            box-shadow: 3px 4px 5px rgba(0, 0, 0, .3);
+        }
+    }
+
+    &__username {
+        display: block;
+        padding-top: 7px;
+        text-align: center;
+    }
+}
+// end g-poker block
+
+// start g-controls block
+// style for component CardSet
+.g-controls {
+    display: flex;
+    color: $gray-98;
+
+    & .active {
+        background: #054a8d;
+    }
+// style for component Card
+    button {
+        width: 40px;
+        margin-right: 5px;
+        padding: 9px 0 11px;
+        background: #5086a2;
+        border-radius: 3px;
+        font-size: rem(30);
+        font-weight: 500;
+        text-align: center;
+        text-shadow: 0 0;
+
+        &:hover {
+            opacity: .85;
+        }
+
+        &:last-child {
+            margin-right: 0;
+            background: $gray-25;
+        }
+    }
+
+    input {
+        @extend button;
+        height: initial;
+        padding: 2px;
+        border: 0;
+        outline: 0;
+
+        &:hover {
+            opacity: .85;
+        }
+
+        &::placeholder {
+            color: $gray-98;
+        }
+
+        &::-webkit-outer-spin-button,
+        &::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+        }
+
+        &[type='number'] {
+            -moz-appearance: textfield;
+        }
+    }
+}
+
+.g-controls__btn-holder {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+
+    button {
+        width: 41.5%;
+        margin-left: 20px;
+
+        &:first-child {
+            margin-left: 0;
+        }
+    }
+}
+// end g-controls block
